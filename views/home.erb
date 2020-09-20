@@ -1,0 +1,18 @@
+<div class="w-25 p-3">
+<h2>Главная</h2>
+
+<form action="/home" method="POST">
+  <div class="form-group">
+    <label>Введите логин</label>
+    <input name="login" type="text" class="form-control" placeholder="Введите свой логин">
+  </div>
+    <label>Введите пароль</label>
+  <div class="form-group">
+    <input name="password" type="text" class="form-control" placeholder="Введите свой пароль">
+  </div>
+  <p><%= @denied %></p>
+  <button type="submit" class="btn btn-primary">Войти</button>
+
+</form>
+
+</div>
