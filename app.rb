@@ -61,12 +61,12 @@ end
 post '/visit' do
   @username = params[:username]
   @phone = params[:phone]
-  @datetime = params[:datetime]
+  @datestamp = params[:datestamp]
   @hairdresser = params[:hairdresser]
   @color = params[:color]
 
   hh = { username: 'Введите имя', phone: 'Введите телефон',
-         datetime: 'Введите дату и время', }
+         datestamp: 'Введите дату и время', }
 
   @error = hh.select {|key,_| params[key] == ''}.values.join(", ")
 
@@ -86,8 +86,8 @@ post '/visit' do
     VALUES
     (?, ?, ?, ?, ?)', [@username, @phone, @datestamp, @hairdresser, @color]
 
-  erb "OK. Name: #{@username}, phone: #{@phone}, time: #{@datetime}, Hairdresser: #{@hairdresser}, Color: #{@color}"
-
+  # erb "OK. Name: #{@username}, phone: #{@phone}, time: #{@datestamp}, Hairdresser: #{@hairdresser}, Color: #{@color}"
+  erb :visit
 end
 
 post '/contacts' do
