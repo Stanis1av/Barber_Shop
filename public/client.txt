@@ -55,3 +55,33 @@ Color: #7bd148
 Name: stas, phone: 8 927-000-00-00, time: 21:00
 Hairdresser: Выберите парикмахера
 Color: #7bd148
+Name: , phone: , time: 
+Hairdresser: Walter White
+Color: #7bd148
+Name: stas, phone: , time: 
+Hairdresser: Walter White
+Color: #7bd148
+Name:  , phone:  , time: 21:00
+Hairdresser: Walter White
+Color: #7bd148
+Name:  , phone:  , time: 21:00
+Hairdresser: Walter White
+Color: #7bd148
+Name: Stanislaus, phone: 88474646, time: 21:00
+Hairdresser: Walter White
+Color: #7bd148
+Name: Stanislaus, phone: 88474646, time: 21:00
+Hairdresser: Walter White
+Color: #7bd148
+Name: Stanislaus, phone: 8 927 033-33-33, time: 21:00
+Hairdresser: Walter White
+Color: #7bd148
+Name: Stanislaus, phone: 8 927 033-33-33, time: 21:00
+Hairdresser: Walter White
+Color: #7bd148
+Name: Stanislaus, phone: 8 927 033-33-33, time: 21:00
+Hairdresser: Walter White
+Color: #7bd148
+Name: stas, phone: 8 927-000-00-00, time: 21:00
+Hairdresser: Jessie Pinkman
+Color: #7bd148

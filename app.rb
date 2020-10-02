@@ -47,10 +47,10 @@ post '/visit' do
   @hairdresser = params[:hairdresser]
   @color = params[:color]
 
-  hh = { username: 'Введите имя', phone: 'Ввелите телефон',
+  hh = { username: 'Введите имя', phone: 'Введите телефон',
          datetime: 'Введите дату и время', }
 
-  @error = hh.select {|key,_| params[key] == ""}.values.join(", ")
+  @error = hh.select {|key,_| params[key] == ''}.values.join(", ")
 
   if @error != ''
     return erb :visit

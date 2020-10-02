@@ -18,12 +18,15 @@
     <input name="datetime" type="text" class="form-control" placeholder="Введите дату и время" value="<%= @datetime %>">
   </div>
 
-  <select name="hairdresser" class="custom-select">
-    <option selected>Выберите парикмахера</option>
-    <option value="Walter White">Walter White</option>
-    <option value="Jessie Pinkman">Jessie Pinkman</option>
-    <option value="Gus Fring">Gus Fring</option>
-  </select>
+  <div class="form-group">
+    <label>Ваш парикмахер: </label>
+    <select name="hairdresser" class="custom-select">
+      <option <%= @hairdresser == 'Walter White' ? 'selected' : '' %>>Walter White</option>
+      <option <%= @hairdresser == 'Jessie Pinkman' ? 'selected' : '' %>>Jessie Pinkman</option>
+      <option <%= @hairdresser == 'Gus Fring' ? 'selected' : '' %>>Gus Fring</option>
+    </select>
+  </div>
+
   <br/>
   <br/>
 
@@ -55,7 +58,7 @@ $(function() {
   $('#color').simplecolorpicker();
 
 });
-
+// Выполнится после того как загрузится вся страница
 </script>
 
 
