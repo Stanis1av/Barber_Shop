@@ -15,7 +15,7 @@
 
   <div class="form-group">
     <label>Когда вас ждать?</label>
-    <input name="datestamp" type="text" class="form-control" placeholder="Введите дату и время" value="<%= @datestamp %>">
+    <input id="datetimepicker" name="datestamp" type="text" class="form-control" placeholder="Введите дату и время" value="<%= @datestamp %>">
   </div>
 
   <div class="form-group">
@@ -56,6 +56,7 @@
 $(function() {
 
   $('#color').simplecolorpicker();
+  $('#datetimepicker').datetimepicker();
 
 });
 // Выполнится после того как загрузится вся страница
