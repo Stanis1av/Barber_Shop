@@ -1,11 +1,15 @@
-<div class="w-25 p-3">
+<div>
+  <%= @results %>
+  <table class="table">
 
-  <form action="/showusers" method="POST">
     <% @results.each do |row| %>
-    <tr>
-        <td><%= row[1] %></td>
+      <tr>
+        <td><%= row['username'] %></td>
+        <td><%= row['phone'] %></td>
+        <td><%= row['datestamp'] %></td>
+        <td><%= row['hairdresser'] %></td>
+        <td><%= row['color'] %></td>
+      </tr>
     <% end %>
-
-  </form>
-
+  </table>
 </div>

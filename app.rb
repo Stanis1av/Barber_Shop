@@ -47,8 +47,9 @@ end
 
 get '/showusers' do
   db = get_db
-  @results = db.execute 'SELECT * FROM Users'
-     # puts "Имя: #{row["username"]}, время записи: #{row["datestamp"]}"
+
+  @results = db.execute 'SELECT * FROM Users ORDER BY Id desc'
+
   erb :showusers
 end
 
