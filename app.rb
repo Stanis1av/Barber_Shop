@@ -4,7 +4,9 @@ require 'sinatra/reloader'
 require 'sqlite3'
 
 def get_db
-  return SQLite3::Database.new 'BarberShop.db'
+  db = SQLite3::Database.new 'BarberShop.db'
+  db.results_as_hash = true
+  db
 end
 
 configure do
@@ -19,6 +21,7 @@ configure do
        "color" TEXT,
         PRIMARY KEY("id" AUTOINCREMENT)
         )'
+
 end
 
 get '/' do
@@ -40,6 +43,13 @@ end
 
 get '/admin' do
   erb :admin
+end
+
+get '/showusers' do
+  db = get_db
+  @results = db.execute 'SELECT * FROM Users'
+     # puts "Имя: #{row["username"]}, время записи: #{row["datestamp"]}"
+  erb :showusers
 end
 
 post '/home' do
@@ -99,6 +109,11 @@ post '/contacts' do
   cont.close
 
   erb :contacts
+end
+
+post '/showusers' do
+
+  erb :showusers
 end
 
 

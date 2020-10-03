@@ -1,0 +1,11 @@
+<div class="w-25 p-3">
+
+  <form action="/showusers" method="POST">
+    <% @results.each do |row| %>
+    <tr>
+        <td><%= row[1] %></td>
+    <% end %>
+
+  </form>
+
+</div>
