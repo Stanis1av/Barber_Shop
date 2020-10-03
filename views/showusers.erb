@@ -1,8 +1,18 @@
 <div>
-  <%= @results %>
+
   <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Имя</th>
+        <th>Телефон</th>
+        <th>Дата и время</th>
+        <th>Парикмахер</th>
+        <th>Цвет</th>
+      </tr>
+    </thead>
 
     <% @results.each do |row| %>
+    <tbody>
       <tr>
         <td><%= row['username'] %></td>
         <td><%= row['phone'] %></td>
@@ -10,6 +20,7 @@
         <td><%= row['hairdresser'] %></td>
         <td><%= row['color'] %></td>
       </tr>
+    </tbody>
     <% end %>
   </table>
 </div>
